@@ -21,6 +21,21 @@
             <button v-on:click="addCounter2()">Increment</button>
             <button v-on:click="reduceCounter2()">Decrement</button>
         </div>
+
+        <!-- Working with Event Argument -->
+        <div>
+            <h1>Counter3 - {{counter3}}</h1>
+            <button v-on:click="addCounter2(10)">Increment 10</button>
+            <button v-on:click="reduceCounter2(5)">Decrement 5</button>
+        </div>
+
+        <!-- Working on Input -->
+        <div>
+            <h1>My name is {{name}}</h1>
+            <input type="text" v-on:input="setName" style="display: block;"/>
+            <!-- Input with argument -->
+            <input type="text" v-on:input="setName2($event, 'Abdurrahman')"/>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
