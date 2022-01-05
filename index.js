@@ -4,10 +4,18 @@ const app = Vue.createApp({
             counter: 0,
             counter2: 0,
             counter3: 0,
-            name: ''
+            name: '',
+            friendName: '',
+            confirmedFriendName: ''
         }
     },
     methods: {
+        friendInputChange(e) {
+            this.name = e.target.value;
+        },
+        submitFriendName() {
+            this.confirmedFriendName = this.name
+        },
         addCounter2(num) {
             if (num) {
                 this.counter3 += num
