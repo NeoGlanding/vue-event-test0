@@ -41,6 +41,7 @@
         <h1>Friends Name</h1>
         <form v-on:submit.prevent="submitFriendName">
             <p>Your Friends name is {{ confirmedFriendName }}</p>
+            <p v-once>Ex. {{ friendName }}</p>
             <input type="text" v-on:input="friendInputChange" />
             <button>Sign Up</button>
         </form>
