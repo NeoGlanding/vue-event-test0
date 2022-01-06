@@ -45,6 +45,12 @@
             <input type="text" v-on:input="friendInputChange" />
             <button>Sign Up</button>
         </form>
+        
+        <!-- Two Way Binding -->
+        <div>
+            <p>input goes here => {{ twoWayText }}</p>
+            <input v-model="twoWayText" type="text"/>
+        </div>
     </div>
 
 

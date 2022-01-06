@@ -6,7 +6,8 @@ const app = Vue.createApp({
             counter3: 0,
             name: '',
             friendName: 'Jordy',
-            confirmedFriendName: ''
+            confirmedFriendName: '',
+            twoWayText: '',
         }
     },
     methods: {
