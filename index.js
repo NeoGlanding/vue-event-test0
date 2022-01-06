@@ -10,6 +10,11 @@ const app = Vue.createApp({
             twoWayText: '',
         }
     },
+    computed: {
+        yourNameAndFriend() {
+            return this.name + ' ' + this.confirmedFriendName
+        }
+    },
     methods: {
         friendInputChange(e) {
             this.friendName = e.target.value;
