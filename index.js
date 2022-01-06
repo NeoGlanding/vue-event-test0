@@ -8,6 +8,14 @@ const app = Vue.createApp({
             friendName: 'Jordy',
             confirmedFriendName: '',
             twoWayText: '',
+            counterWatcher: 0
+        }
+    },
+    watch: {
+        counterWatcher(value) {
+            if (value > 50) {
+                this.counterWatcher = 0
+            }
         }
     },
     computed: {
@@ -16,6 +24,9 @@ const app = Vue.createApp({
         }
     },
     methods: {
+        counterWatcherAdd(params) {
+            this.counterWatcher += params
+        },
         friendInputChange(e) {
             this.friendName = e.target.value;
         },
